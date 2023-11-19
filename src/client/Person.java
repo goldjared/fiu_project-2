@@ -2,34 +2,21 @@ package client;
 import java.util.ArrayList;
 import payment.CreditCard;
   public class Person {
-    //---------------------------------------------------------------------------
-// Instance Variable
-//---------------------------------------------------------------------------
-// check the UML diagram to see which instance variable you need
-// YOUR CODE HERE
     private String firstName;
     private String lastName;
     private String streetAddress;
     private String suiteAddress;
     private String cityAddress;
     private String stateAddress;
-//    private ArrayList<String> creditCards;
-
-
     private ArrayList creditCards;
 
-
-    //---------------------------------------------------------------------------
-// Constructor
-//---------------------------------------------------------------------------
     public Person(String firstName,
                   String lastName,
                   String streetAddress,
                   String suiteAddress,
                   String cityAddress,
                   String stateAddress) {
-// assign the input values to the instance variables
-// YOUR CODE HERE
+
       this.firstName=firstName;
       this.lastName=lastName;
       this.streetAddress=streetAddress;
@@ -37,10 +24,8 @@ import payment.CreditCard;
       this.cityAddress=cityAddress;
       this.stateAddress=stateAddress;
       creditCards = new ArrayList<>();
-    }//end constructor
-    //---------------------------------------------------------------------------
-// Setter and Getters
-//---------------------------------------------------------------------------
+    }
+
     public String getFirstName() {
       return firstName;
     }
@@ -65,9 +50,7 @@ import payment.CreditCard;
     public void setSuiteAddress(String suiteAddress) {
       this.suiteAddress = suiteAddress;
     }
-    // write the code for the needed setter and getters
-// check the UML Diagram
-// YOUR CODE HERE
+
     public String getCityAddress() {
       return cityAddress;
     }
@@ -88,42 +71,32 @@ import payment.CreditCard;
       this.creditCards=creditCards;
     }
 
-//---------------------------------------------------------------------------
-// Utility Methods
-//---------------------------------------------------------------------------
-
 public void displayInfo(){
-System.out.println("");
-System.out.println("============================================================================"
-);
-System.out.println("Display Information" );
-System.out.println("============================================================================"
-);
-System.out.printf("%-20s %s %s \n","Name:", firstName, lastName);
-System.out.printf("%-20s %-20s \n", "Address", streetAddress);
-System.out.printf("%-20s %-20s \n", "Suite:", suiteAddress);
-System.out.printf("%-20s %-20s \n", "City:", cityAddress);
-System.out.printf("%-20s %-20s \n", "State:", stateAddress);
+  System.out.println("");
+  System.out.println("============================================================================"
+  );
+  System.out.println("Display Information" );
+  System.out.println("============================================================================"
+  );
+  System.out.printf("%-20s %s %s \n","Name:", firstName, lastName);
+  System.out.printf("%-20s %-20s \n", "Address", streetAddress);
+  System.out.printf("%-20s %-20s \n", "Suite:", suiteAddress);
+  System.out.printf("%-20s %-20s \n", "City:", cityAddress);
+  System.out.printf("%-20s %-20s \n", "State:", stateAddress);
 
-// write the code needed for the output to match the project doc output
-// hint look at the code above to have the correct format
-// YOUR CODE HERE
-System.out.println("------------------");
-System.out.println("Credit Card Info");
-System.out.println("------------------");
-for(int i=0; i<creditCards.size();i++){
-String cardName = ((CreditCard)creditCards.get(i)).getType();
-// hint look at the code for cardName above
-double creditLimit = ((CreditCard)creditCards.get(i)).getCreditLimit();
-// get the creditCards current balance
-// hint look at the code for cardName above
-double currentBalance= ((CreditCard)creditCards.get(i)).getCurrentBalance();
-System.out.printf("%-20s %-20s \n", "CreditCard:", cardName);
-System.out.printf("%-20s %-20.2f \n", "Credit Limit:", creditLimit);
-System.out.printf("%-20s %-20.2f \n", "Current Balance:", currentBalance);
-System.out.println("");
+
+  System.out.println("------------------");
+  System.out.println("Credit Card Info");
+  System.out.println("------------------");
+  for(int i=0; i<creditCards.size();i++){
+    String cardName = ((CreditCard)creditCards.get(i)).getType();
+    double creditLimit = ((CreditCard)creditCards.get(i)).getCreditLimit();
+
+    double currentBalance= ((CreditCard)creditCards.get(i)).getCurrentBalance();
+    System.out.printf("%-20s %-20s \n", "CreditCard:", cardName);
+    System.out.printf("%-20s %-20.2f \n", "Credit Limit:", creditLimit);
+    System.out.printf("%-20s %-20.2f \n", "Current Balance:", currentBalance);
+    System.out.println("");
+  }
 }
 }
-
-//----------------------------------------------------
-  }//end class
