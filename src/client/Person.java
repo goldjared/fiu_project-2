@@ -91,7 +91,7 @@ import payment.CreditCard;
 //---------------------------------------------------------------------------
 // Utility Methods
 //---------------------------------------------------------------------------
-/*
+
 public void displayInfo(){
 System.out.println("");
 System.out.println("============================================================================"
@@ -101,6 +101,10 @@ System.out.println("============================================================
 );
 System.out.printf("%-20s %s %s \n","Name:", firstName, lastName);
 System.out.printf("%-20s %-20s \n", "Address", streetAddress);
+System.out.printf("%-20s %-20s \n", "Suite:", suiteAddress);
+System.out.printf("%-20s %-20s \n", "City:", cityAddress);
+System.out.printf("%-20s %-20s \n", "State:", stateAddress);
+
 // write the code needed for the output to match the project doc output
 // hint look at the code above to have the correct format
 // YOUR CODE HERE
@@ -109,18 +113,17 @@ System.out.println("Credit Card Info");
 System.out.println("------------------");
 for(int i=0; i<creditCards.size();i++){
 String cardName = ((CreditCard)creditCards.get(i)).getType();
-// get the creditCards credit limit
 // hint look at the code for cardName above
-double creditLimit = // YOUR CODE HERE
+double creditLimit = ((CreditCard)creditCards.get(i)).getCreditLimit();
 // get the creditCards current balance
 // hint look at the code for cardName above
-double currentBalance = // YOUR CODE HERE
+double currentBalance= ((CreditCard)creditCards.get(i)).getCurrentBalance();
 System.out.printf("%-20s %-20s \n", "CreditCard:", cardName);
 System.out.printf("%-20s %-20.2f \n", "Credit Limit:", creditLimit);
 System.out.printf("%-20s %-20.2f \n", "Current Balance:", currentBalance);
 System.out.println("");
 }
 }
-*/
+
 //----------------------------------------------------
   }//end class
