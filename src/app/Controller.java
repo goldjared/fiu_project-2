@@ -58,11 +58,13 @@ Random generator = new Random();
       Thread.sleep(generator.nextInt(1001));
       int randomSelectCard = generator.nextInt(2);
       if(randomSelectCard == 0) {
-        ((CreditCard) john.getCreditCards().get(0)).makeCharge(coke);
+
         System.out.println("randomSelectCard: MasterCard");
+        ((CreditCard) john.getCreditCards().get(0)).makeCharge(coke);
       } else if(randomSelectCard == 1) {
-        ((CreditCard) john.getCreditCards().get(1)).makeCharge(coke);
+
         System.out.println("randomSelectCard: American Express");
+        ((CreditCard) john.getCreditCards().get(1)).makeCharge(coke);
       }
     }
     ((CreditCard) john.getCreditCards().get(0)).transactionsReport();
